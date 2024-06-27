@@ -33,7 +33,8 @@ public class SwaggerConfig {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title(" Human Resource Management System")
-                .description("We are providing you with a simple REST service with some very basic functionality - to add and read an\n" +
+                .description("We are providing you with a simple REST service with " +
+                        "some very basic functionality - to add and read an\n" +
                         "HRMS.")
                 .version("1.0.0")
                 .build();

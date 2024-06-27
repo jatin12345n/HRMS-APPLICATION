@@ -1,7 +1,17 @@
 package com.example.HRMS_APPLICATION.repository;
 
-import com.example.HRMS_APPLICATION.model.LeaveRequest;
+import com.example.HRMS_APPLICATION.domain.LeaveRequest;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface LeaveRequestRepository extends JpaRepository<LeaveRequest, Long> {
+import java.util.List;
+
+public interface LeaveRequestRepository{
+
+    void createLeaveRequest(LeaveRequest leaveRequest);
+
+    LeaveRequest getLeaveRequest(String leaveRequestId);
+
+    List<LeaveRequest> findAllLeaveRequest();
+
+    void clearLeaveRequests();
 }

@@ -1,7 +1,17 @@
 package com.example.HRMS_APPLICATION.repository;
 
-import com.example.HRMS_APPLICATION.model.Application;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.example.HRMS_APPLICATION.exception.DuplicateApplicationIdException;
+import com.example.HRMS_APPLICATION.domain.Application;
 
-public interface ApplicationRepository extends JpaRepository<Application, Long> {
+import java.util.List;
+
+public interface ApplicationRepository{
+
+    void createApplication(Application application)throws DuplicateApplicationIdException;
+
+    List<Application> findAllApplications();
+
+    Application getApplication(String applicationId);
+
+    void clearApplications();
 }

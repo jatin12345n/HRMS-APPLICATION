@@ -19,7 +19,7 @@ import java.time.LocalDate;
 public class LeaveRequest {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Long employeeId;
+    private String id;
+    private String employeeName;
     private LocalDate startDate;
     private LocalDate endDate;}

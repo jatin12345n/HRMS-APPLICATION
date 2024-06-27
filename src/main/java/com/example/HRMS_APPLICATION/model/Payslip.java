@@ -19,6 +19,6 @@ import java.math.BigDecimal;
 public class Payslip {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Long employeeId;
+    private String id;
+    private String employeeName;
     private BigDecimal amount;}
